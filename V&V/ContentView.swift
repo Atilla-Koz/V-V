@@ -138,7 +138,10 @@ struct Translations {
         "timer_duration": "Süre (saniye)",
         "minutes": "dakika",
         "seconds": "saniye",
-        "sound_enabled": "Ses Aktif"
+        "sound_enabled": "Ses Aktif",
+        "how_to_play": "Nasıl Oynanır",
+        "game_description": "Vampir Köylü, bir sosyal çıkarım oyunudur. Bu uygulama, oyun yöneticisinin rol dağıtımını ve süre takibini kolayca yapabilmesini sağlar.\n\nOyun Kuralları:\n\n1. Oyuncular iki gruba ayrılır: Vampirler ve Köylüler\n\n2. Oyun gece ve gündüz olmak üzere iki fazda oynanır:\n- Gece: Vampirler bir köylüyü öldürmeye çalışır\n- Gündüz: Tüm oyuncular tartışır ve şüpheli bir kişiyi oylamaya sunar\n\n3. Özel Roller:\n- Kahin: Her gece bir kişinin rolünü öğrenebilir\n- Doktor: Her gece bir kişiyi vampir saldırısından koruyabilir\n- Avcı: Oyun boyunca bir kez birini öldürebilir\n- Büyücü: Bir kez diriltme ve bir kez öldürme hakkı vardır\n- Masum Köylü: Gece fazında gözlerini açabilir\n\n4. Kazanma Koşulları:\n- Vampirler: Tüm köylüleri öldürdüklerinde\n- Köylüler: Tüm vampirleri bulup öldürdüklerinde",
+        "app_description": "Bu uygulama, Vampir Köylü oyununun yönetimini kolaylaştırmak için tasarlanmıştır. Oyuncu ekleme, rol dağıtma ve süre takibi gibi özellikleri içerir."
     ]
     
     static let englishTexts: [String: String] = [
@@ -183,7 +186,10 @@ struct Translations {
         "timer_duration": "Duration (seconds)",
         "minutes": "minutes",
         "seconds": "seconds",
-        "sound_enabled": "Sound Enabled"
+        "sound_enabled": "Sound Enabled",
+        "how_to_play": "How to Play",
+        "game_description": "Vampire Village is a social deduction game. This app helps the game master easily distribute roles and track time.\n\nGame Rules:\n\n1. Players are divided into two groups: Vampires and Villagers\n\n2. The game is played in two phases, night and day:\n- Night: Vampires try to kill a villager\n- Day: All players discuss and vote on a suspicious person\n\n3. Special Roles:\n- Seer: Can learn one person's role each night\n- Doctor: Can protect someone from vampire attacks each night\n- Hunter: Can kill one person during the game\n- Wizard: Has one resurrection and one kill right\n- Innocent Villager: Can open eyes during night phase\n\n4. Win Conditions:\n- Vampires: When all villagers are dead\n- Villagers: When all vampires are found and killed",
+        "app_description": "This app is designed to facilitate the management of the Vampire Village game. It includes features such as adding players, distributing roles, and time tracking."
     ]
     
     static let germanTexts: [String: String] = [
@@ -228,7 +234,10 @@ struct Translations {
         "timer_duration": "Dauer (Sekunden)",
         "minutes": "Minuten",
         "seconds": "Sekunden",
-        "sound_enabled": "Ton Aktiviert"
+        "sound_enabled": "Ton Aktiviert",
+        "how_to_play": "Wie man spielt",
+        "game_description": "Vampire Village ist ein sozialer Entdeckungsspiel. Diese App hilft dem Spielleiter, Rollen einfach zu verteilen und die Zeit zu verfolgen.\n\nSpielregeln:\n\n1. Spieler werden in zwei Gruppen aufgeteilt: Vampiren und Dorfbewohner\n\n2. Das Spiel wird in zwei Phasen gespielt, Nacht und Tag:\n- Nacht: Vampiren versuchen, einen Dorfbewohner zu töten\n- Tag: Alle Spieler diskutieren und stimmen über eine verdächtige Person ab\n\n3. Besondere Rollen:\n- Seher: Kann die Rolle einer Person jeden Abend erfahren\n- Arzt: Kann jemanden vor Nachtsangriffen schützen\n- Jäger: Kann während des Spiels eine Person töten\n- Zauberer: Hat ein Wiederauferstehungsrecht und ein Tötungsrecht\n- Unschuldiger Dorfbewohner: Kann die Augen während der Nachtphase öffnen\n\n4. Siegbedingungen:\n- Vampiren: Wenn alle Dorfbewohner tot sind\n- Dorfbewohner: Wenn alle Vampiren gefunden und getötet sind",
+        "app_description": "Diese App wurde entwickelt, um die Verwaltung des Vampire Village Spiels zu erleichtern. Sie enthält Funktionen wie Spieler hinzufügen, Rollen verteilen und Zeit verfolgen."
     ]
     
     static let frenchTexts: [String: String] = [
@@ -273,7 +282,10 @@ struct Translations {
         "timer_duration": "Durée (secondes)",
         "minutes": "minutes",
         "seconds": "secondes",
-        "sound_enabled": "Son Activé"
+        "sound_enabled": "Son Activé",
+        "how_to_play": "Comment jouer",
+        "game_description": "Vampire Village est un jeu de déduction sociale. Cette application facilite la distribution des rôles et le suivi du temps.\n\nRègles du jeu :\n\n1. Les joueurs sont divisés en deux groupes : les vampires et les villageois\n\n2. Le jeu se déroule en deux phases, la nuit et le jour :\n- Nuit : Les vampires tentent de tuer un villageois\n- Jour : Tous les joueurs discutent et votent pour une personne suspecte\n\n3. Rôles spéciaux :\n- Voyant : Peut apprendre le rôle d'une personne chaque nuit\n- Médecin : Peut protéger quelqu'un des attaques de vampire chaque nuit\n- Chasseur : Peut tuer une personne pendant le jeu\n- Sorcier : A le droit de résurrection et de mort\n- Villageois Innocent : Peut ouvrir les yeux pendant la phase de nuit\n\n4. Conditions de victoire :\n- Vampires : Lorsque tous les villageois sont morts\n- Villageois : Lorsque tous les vampires sont trouvés et tués",
+        "app_description": "Cette application est conçue pour faciliter la gestion du jeu Vampire Village. Elle inclut des fonctionnalités telles que l'ajout de joueurs, la distribution des rôles et le suivi du temps."
     ]
     
     static let spanishTexts: [String: String] = [
@@ -318,7 +330,10 @@ struct Translations {
         "timer_duration": "Duración (segundos)",
         "minutes": "minutos",
         "seconds": "segundos",
-        "sound_enabled": "Sonido Activado"
+        "sound_enabled": "Sonido Activado",
+        "how_to_play": "Cómo jugar",
+        "game_description": "Vampire Village es un juego de deducción social. Esta aplicación facilita la distribución de roles y el seguimiento del tiempo.\n\nReglas del juego :\n\n1. Los jugadores se dividen en dos grupos : los vampiros y los aldeanos\n\n2. El juego se juega en dos fases, la noche y el día :\n- Noche : Los vampiros intentan matar a un aldeano\n- Día : Todos los jugadores discuten y votan por una persona sospechosa\n\n3. Roles especiales :\n- Vidente : Puede aprender el rol de una persona cada noche\n- Doctor : Puede proteger a alguien de los ataques de vampiro cada noche\n- Cazador : Puede matar a una persona durante el juego\n- Mago : Tiene el derecho de resurrección y de muerte\n- Aldeano Inocente : Puede abrir los ojos durante la fase de noche\n\n4. Condiciones de victoria :\n- Vampiros : Cuando todos los aldeanos están muertos\n- Aldeanos : Cuando todos los vampiros están encontrados y muertos",
+        "app_description": "Esta aplicación está diseñada para facilitar la gestión del juego Vampire Village. Incluye funciones como agregar jugadores, distribuir roles y rastrear el tiempo."
     ]
 }
 
@@ -445,6 +460,7 @@ struct ContentView: View {
     @State private var playerToDelete: Player? = nil
     @State private var showingDeleteAllAlert = false
     @State private var showingSettingsSheet = false
+    @State private var showingHowToPlaySheet = false
     
     var body: some View {
         NavigationView {
@@ -675,77 +691,8 @@ struct ContentView: View {
                 Text(Translations.text(for: "delete_all_warning", language: viewModel.selectedLanguage))
             }
             .sheet(isPresented: $showingSettingsSheet) {
-                NavigationView {
-                    ZStack {
-                        Color(red: 0.3, green: 0.2, blue: 0.1)
-                            .ignoresSafeArea()
-                        
-                        VStack(spacing: 20) {
-                            List {
-                                Section(header: Text(Translations.text(for: "language", language: viewModel.selectedLanguage))
-                                    .foregroundColor(Color(red: 0.8, green: 0.7, blue: 0.3))
-                                    .font(.custom("Georgia", size: 18))) {
-                                    ForEach(Language.allCases, id: \.self) { language in
-                                        Button(action: {
-                                            viewModel.selectedLanguage = language
-                                        }) {
-                                            HStack {
-                                                Text(language.flagEmoji)
-                                                    .font(.title2)
-                                                Text(language.rawValue)
-                                                    .foregroundColor(Color(red: 0.95, green: 0.9, blue: 0.8))
-                                                Spacer()
-                                                if viewModel.selectedLanguage == language {
-                                                    Image(systemName: "checkmark")
-                                                        .foregroundColor(Color(red: 0.8, green: 0.7, blue: 0.3))
-                                                }
-                                            }
-                                        }
-                                        .listRowBackground(Color(red: 0.3, green: 0.2, blue: 0.1))
-                                    }
-                                }
-                                
-                                Section(header: Text(Translations.text(for: "timer_settings", language: viewModel.selectedLanguage))
-                                    .foregroundColor(Color(red: 0.8, green: 0.7, blue: 0.3))
-                                    .font(.custom("Georgia", size: 18))) {
-                                    
-                                    Toggle(isOn: $viewModel.isTimerEnabled) {
-                                        Text(Translations.text(for: "timer_enabled", language: viewModel.selectedLanguage))
-                                            .foregroundColor(Color(red: 0.95, green: 0.9, blue: 0.8))
-                                    }
-                                    .listRowBackground(Color(red: 0.3, green: 0.2, blue: 0.1))
-                                    .tint(Color(red: 0.8, green: 0.7, blue: 0.3))
-                                    
-                                    if viewModel.isTimerEnabled {
-                                        Picker("", selection: $viewModel.timerDuration) {
-                                            ForEach([60, 120, 180, 240, 300], id: \.self) { seconds in
-                                                if seconds < 60 {
-                                                    Text("\(seconds) \(Translations.text(for: "seconds", language: viewModel.selectedLanguage))")
-                                                } else {
-                                                    Text("\(seconds/60) \(Translations.text(for: "minutes", language: viewModel.selectedLanguage))")
-                                                }
-                                            }
-                                        }
-                                        .pickerStyle(.menu)
-                                        .listRowBackground(Color(red: 0.3, green: 0.2, blue: 0.1))
-                                        .accentColor(Color(red: 0.8, green: 0.7, blue: 0.3))
-                                    }
-                                }
-                            }
-                            .scrollContentBackground(.hidden)
-                        }
-                    }
-                    .navigationTitle(Translations.text(for: "settings", language: viewModel.selectedLanguage))
-                    .navigationBarTitleDisplayMode(.inline)
-                    .toolbar {
-                        ToolbarItem(placement: .navigationBarTrailing) {
-                            Button(Translations.text(for: "done", language: viewModel.selectedLanguage)) {
-                                showingSettingsSheet = false
-                            }
-                            .foregroundColor(Color(red: 0.8, green: 0.7, blue: 0.3))
-                        }
-                    }
-                }
+                SettingsView()
+                    .environmentObject(viewModel)
             }
         }
     }
@@ -1060,6 +1007,151 @@ struct RoleDistributionView: View {
                     }
                 }
             }
+        }
+    }
+}
+
+// Nasıl Oynanır görünümü
+struct HowToPlayView: View {
+    @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var viewModel: GameViewModel
+    
+    var body: some View {
+        NavigationView {
+            ZStack {
+                Color(red: 0.3, green: 0.2, blue: 0.1)
+                    .ignoresSafeArea()
+                
+                Image(systemName: "seal.fill")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .foregroundColor(.white.opacity(0.03))
+                    .frame(width: 200, height: 200)
+                    .rotationEffect(.degrees(45))
+                    .position(x: UIScreen.main.bounds.width * 0.8, y: UIScreen.main.bounds.height * 0.2)
+                
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 20) {
+                        Text(Translations.text(for: "app_description", language: viewModel.selectedLanguage))
+                            .font(.custom("Georgia", size: 16))
+                            .foregroundColor(Color(red: 0.95, green: 0.9, blue: 0.8))
+                            .padding(.bottom)
+                        
+                        Text(Translations.text(for: "game_description", language: viewModel.selectedLanguage))
+                            .font(.custom("Georgia", size: 16))
+                            .foregroundColor(Color(red: 0.95, green: 0.9, blue: 0.8))
+                    }
+                    .padding()
+                }
+            }
+            .navigationTitle(Translations.text(for: "how_to_play", language: viewModel.selectedLanguage))
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(Translations.text(for: "close", language: viewModel.selectedLanguage)) {
+                        dismiss()
+                    }
+                    .foregroundColor(Color(red: 0.8, green: 0.7, blue: 0.3))
+                }
+            }
+        }
+    }
+}
+
+struct SettingsView: View {
+    @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var viewModel: GameViewModel
+    @State private var showingHowToPlaySheet = false
+    
+    var body: some View {
+        NavigationView {
+            ZStack {
+                Color(red: 0.3, green: 0.2, blue: 0.1)
+                    .ignoresSafeArea()
+                
+                VStack(spacing: 20) {
+                    List {
+                        Section(header: Text(Translations.text(for: "language", language: viewModel.selectedLanguage))
+                            .foregroundColor(Color(red: 0.8, green: 0.7, blue: 0.3))
+                            .font(.custom("Georgia", size: 18))) {
+                            ForEach(Language.allCases, id: \.self) { language in
+                                Button(action: {
+                                    viewModel.selectedLanguage = language
+                                }) {
+                                    HStack {
+                                        Text(language.flagEmoji)
+                                            .font(.title2)
+                                        Text(language.rawValue)
+                                            .foregroundColor(Color(red: 0.95, green: 0.9, blue: 0.8))
+                                        Spacer()
+                                        if viewModel.selectedLanguage == language {
+                                            Image(systemName: "checkmark")
+                                                .foregroundColor(Color(red: 0.8, green: 0.7, blue: 0.3))
+                                        }
+                                    }
+                                }
+                                .listRowBackground(Color(red: 0.3, green: 0.2, blue: 0.1))
+                            }
+                        }
+                        
+                        Section(header: Text(Translations.text(for: "timer_settings", language: viewModel.selectedLanguage))
+                            .foregroundColor(Color(red: 0.8, green: 0.7, blue: 0.3))
+                            .font(.custom("Georgia", size: 18))) {
+                            
+                            Toggle(isOn: $viewModel.isTimerEnabled) {
+                                Text(Translations.text(for: "timer_enabled", language: viewModel.selectedLanguage))
+                                    .foregroundColor(Color(red: 0.95, green: 0.9, blue: 0.8))
+                            }
+                            .listRowBackground(Color(red: 0.3, green: 0.2, blue: 0.1))
+                            .tint(Color(red: 0.8, green: 0.7, blue: 0.3))
+                            
+                            if viewModel.isTimerEnabled {
+                                Picker("", selection: $viewModel.timerDuration) {
+                                    ForEach([60, 120, 180, 240, 300], id: \.self) { seconds in
+                                        if seconds < 60 {
+                                            Text("\(seconds) \(Translations.text(for: "seconds", language: viewModel.selectedLanguage))")
+                                        } else {
+                                            Text("\(seconds/60) \(Translations.text(for: "minutes", language: viewModel.selectedLanguage))")
+                                        }
+                                    }
+                                }
+                                .pickerStyle(.menu)
+                                .listRowBackground(Color(red: 0.3, green: 0.2, blue: 0.1))
+                                .accentColor(Color(red: 0.8, green: 0.7, blue: 0.3))
+                            }
+                        }
+                        
+                        Section {
+                            Button(action: {
+                                showingHowToPlaySheet = true
+                            }) {
+                                HStack {
+                                    Image(systemName: "questionmark.circle.fill")
+                                        .foregroundColor(Color(red: 0.8, green: 0.7, blue: 0.3))
+                                    Text(Translations.text(for: "how_to_play", language: viewModel.selectedLanguage))
+                                        .foregroundColor(Color(red: 0.95, green: 0.9, blue: 0.8))
+                                }
+                            }
+                            .listRowBackground(Color(red: 0.3, green: 0.2, blue: 0.1))
+                        }
+                    }
+                    .scrollContentBackground(.hidden)
+                }
+            }
+            .navigationTitle(Translations.text(for: "settings", language: viewModel.selectedLanguage))
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(Translations.text(for: "done", language: viewModel.selectedLanguage)) {
+                        dismiss()
+                    }
+                    .foregroundColor(Color(red: 0.8, green: 0.7, blue: 0.3))
+                }
+            }
+        }
+        .sheet(isPresented: $showingHowToPlaySheet) {
+            HowToPlayView()
+                .environmentObject(viewModel)
         }
     }
 }
