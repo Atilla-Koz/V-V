@@ -10,7 +10,7 @@ import AVFoundation
 import AudioToolbox
 
 // Oyuncu modeli
-struct Player: Identifiable {
+struct Player: Identifiable, Codable {
     let id = UUID()
     var name: String
     var role: GameRole?
@@ -18,7 +18,7 @@ struct Player: Identifiable {
 }
 
 // Oyun rolleri
-enum GameRole: String, CaseIterable, Identifiable {
+enum GameRole: String, CaseIterable, Identifiable, Codable {
     case vampir = "🧛"
     case köylü = "👨‍🌾"
     case masumKöylü = "😇"
@@ -61,7 +61,7 @@ enum GameRole: String, CaseIterable, Identifiable {
 }
 
 // Dil seçenekleri
-enum Language: String, CaseIterable {
+enum Language: String, CaseIterable, Codable {
     case turkish = "Türkçe"
     case english = "English"
     case german = "Deutsch"
@@ -339,12 +339,36 @@ struct Translations {
 
 // ViewModel
 class GameViewModel: ObservableObject {
-    @Published var players: [Player] = []
-    @Published var selectedLanguage: Language = .turkish
-    @Published var customRoleName: String?
-    @Published var customRoleDescription: String?
-    @Published var isTimerEnabled: Bool = true
-    @Published var timerDuration: Int = 180 // 3 dakika varsayılan
+    @Published var players: [Player] = [] {
+        didSet {
+            saveData()
+        }
+    }
+    @Published var selectedLanguage: Language = .turkish {
+        didSet {
+            saveData()
+        }
+    }
+    @Published var customRoleName: String? {
+        didSet {
+            saveData()
+        }
+    }
+    @Published var customRoleDescription: String? {
+        didSet {
+            saveData()
+        }
+    }
+    @Published var isTimerEnabled: Bool = true {
+        didSet {
+            saveData()
+        }
+    }
+    @Published var timerDuration: Int = 180 {
+        didSet {
+            saveData()
+        }
+    }
     @Published var remainingTime: Int = 180
     @Published var isTimerRunning: Bool = false
     @Published var roleDistribution: [GameRole: Int] = [
@@ -355,8 +379,87 @@ class GameViewModel: ObservableObject {
         .doktor: 1,
         .avcı: 1,
         .büyücü: 1
-    ]
-    
+    ] {
+        didSet {
+            saveData()
+        }
+    }
+
+    init() {
+        loadData()
+    }
+
+    private func saveData() {
+        // Oyuncuları Dictionary'e çevir
+        let playerDicts = players.map { player -> [String: Any] in
+            [
+                "name": player.name,
+                "role": player.role?.rawValue ?? "",
+                "isDead": player.isDead
+            ]
+        }
+
+        // Role dağılımını Dictionary'e çevir
+        let distributionDict = roleDistribution.mapKeys { $0.rawValue }
+
+        // Tüm verileri kaydet
+        let data: [String: Any] = [
+            "players": playerDicts,
+            "selectedLanguage": selectedLanguage.rawValue,
+            "customRoleName": customRoleName ?? "",
+            "customRoleDescription": customRoleDescription ?? "",
+            "isTimerEnabled": isTimerEnabled,
+            "timerDuration": timerDuration,
+            "roleDistribution": distributionDict
+        ]
+
+        UserDefaults.standard.set(data, forKey: "GameData")
+    }
+
+    private func loadData() {
+        guard let data = UserDefaults.standard.dictionary(forKey: "GameData") else { return }
+
+        // Dil seçimini yükle
+        if let languageStr = data["selectedLanguage"] as? String,
+           let language = Language(rawValue: languageStr) {
+            selectedLanguage = language
+        }
+
+        // Özel rol bilgilerini yükle
+        customRoleName = data["customRoleName"] as? String
+        customRoleDescription = data["customRoleDescription"] as? String
+
+        // Sayaç ayarlarını yükle
+        isTimerEnabled = data["isTimerEnabled"] as? Bool ?? true
+        timerDuration = data["timerDuration"] as? Int ?? 180
+        remainingTime = timerDuration
+
+        // Rol dağılımını yükle
+        if let distributionDict = data["roleDistribution"] as? [String: Int] {
+            var newDistribution: [GameRole: Int] = [:]
+            for (roleStr, count) in distributionDict {
+                if let role = GameRole(rawValue: roleStr) {
+                    newDistribution[role] = count
+                }
+            }
+            roleDistribution = newDistribution
+        }
+
+        // Oyuncuları yükle
+        if let playerDicts = data["players"] as? [[String: Any]] {
+            players = playerDicts.compactMap { dict -> Player? in
+                guard let name = dict["name"] as? String else { return nil }
+                let roleStr = dict["role"] as? String
+                let role = roleStr.flatMap { GameRole(rawValue: $0) }
+                let isDead = dict["isDead"] as? Bool ?? false
+                var player = Player(name: name)
+                player.role = role
+                player.isDead = isDead
+                return player
+            }
+        }
+    }
+
     private func playVibration() {
         AudioServicesPlayAlertSoundWithCompletion(SystemSoundID(kSystemSoundID_Vibrate)) { }
     }
@@ -432,6 +535,16 @@ class GameViewModel: ObservableObject {
         for i in 0..<players.count {
             players[i].role = nil
         }
+    }
+}
+
+extension Dictionary {
+    func mapKeys<T>(_ transform: (Key) -> T) -> [T: Value] {
+        var result: [T: Value] = [:]
+        for (key, value) in self {
+            result[transform(key)] = value
+        }
+        return result
     }
 }
 
